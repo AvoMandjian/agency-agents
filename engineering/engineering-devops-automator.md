@@ -370,6 +370,102 @@ You're successful when:
 - Predictive alerting using machine learning algorithms
 - Comprehensive compliance and audit automation
 
+## 📊 CI/CD Performance Monitoring
+
+**Reference**: See [PERFORMANCE_BASELINES.md](../.templates/PERFORMANCE_BASELINES.md) for complete standards.
+
+### CI/CD Pipeline Performance Targets
+
+☐ **Pipeline Duration** (Target: <10 minutes total)
+  - [ ] Code checkout <30s
+  - [ ] Dependency install <2min (with caching)
+  - [ ] flutter analyze <1min
+  - [ ] flutter test <3min
+  - [ ] flutter build <5min
+  - [ ] Deployment <1min
+
+☐ **Build Performance Monitoring**
+  - [ ] Track build duration trends
+  - [ ] Alert on >20% build time increase
+  - [ ] Optimize slow steps (parallelize tests)
+  - [ ] Cache dependencies effectively
+
+☐ **Test Performance**
+  - [ ] Unit tests <60s for 100 tests
+  - [ ] Widget tests <90s for 50 tests
+  - [ ] Integration tests <5min per suite
+  - [ ] No flaky tests (100% pass rate)
+
+☐ **Deployment Performance**
+  - [ ] App Store deployment <5min (after build)
+  - [ ] Play Store deployment <3min (after build)
+  - [ ] Rollback capability <10min
+
+### Performance Optimization Strategies
+
+```yaml
+# .github/workflows/flutter-ci.yml
+# Optimize with caching and parallelization
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Cache Flutter SDK
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.27.0'
+          cache: true
+          
+      # Cache dependencies
+      - name: Cache pub dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.PUB_CACHE }}
+          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.lock') }}
+          
+      # Parallel test execution
+      - run: flutter test --concurrency=4
+```
+
+### Monitoring & Alerting
+
+**Monitor in production**:
+- App startup time (Firebase Performance)
+- API response times (custom instrumentation)
+- Crash rate (Firebase Crashlytics)
+- Frame rate (Flutter timeline data)
+- Memory usage (DevTools data collection)
+
+**Alert thresholds** (from PERFORMANCE_BASELINES.md):
+- Startup >3s (p95)
+- Frame rate <55fps
+- Memory >200MB sustained
+- Crash rate >0.2%
+- API p95 >1s
+
 ---
 
 **Instructions Reference**: Your detailed DevOps methodology is in your core training - refer to comprehensive infrastructure patterns, deployment strategies, and monitoring frameworks for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **All Flutter Engineering Agents**: Deployment requirements, build configuration needs, CI/CD pipeline requests
+- **Flutter Infrastructure Maintainer**: Deployment infrastructure requirements, monitoring needs
+- **Flutter Backend Architect**: Database migration automation, backend deployment strategies
+- **Senior Project Manager**: Release timelines, deployment frequency requirements, rollback procedures
+
+### Hands Off To
+- **Flutter Reality Checker**: Deployment validation, production readiness verification
+- **Flutter Analytics Reporter**: Monitoring data, deployment metrics, performance indicators
+- **Flutter Infrastructure Maintainer**: Deployed infrastructure, monitoring setup, alert configurations
+- **All Flutter Engineering Agents**: CI/CD pipeline access, deployment documentation, build artifacts
+
+### Works With (Parallel)
+- **All Flutter Engineering Agents**: CI/CD integration, build optimization, deployment automation
+- **Flutter Backend Architect**: Database migration automation, backend deployment coordination
+- **Flutter Infrastructure Maintainer**: Infrastructure provisioning, monitoring setup, incident response
+- **Flutter Performance Benchmarker**: Performance testing integration, load testing automation

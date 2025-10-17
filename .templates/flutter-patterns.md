@@ -219,6 +219,389 @@ class ProductResponse {
 }
 ```
 
+## User Notification Pattern with GlobalSnackbar
+
+### Why GlobalSnackbar?
+GlobalSnackbar provides consistent, transient user feedback across your Flutter app. Use it for success confirmations, error messages, and important notifications that don't require user interaction. Best practices include positioning at screen bottom, reasonable duration (3-5 seconds), and clear, concise messages.
+
+### GlobalSnackbar Utility Class
+```dart
+// MANDATORY: Centralized user notification system
+// Reference: https://api.flutter.dev/flutter/material/ScaffoldMessenger-class.html
+import 'package:flutter/material.dart';
+
+class GlobalSnackbar {
+  /// Show success toast notification (green background)
+  static void showSuccessToast(BuildContext context, String message) {
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Row(
+            children: [
+              const Icon(Icons.check_circle, color: Colors.white),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  message,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          backgroundColor: Colors.green.shade600,
+          duration: const Duration(seconds: 3),
+          behavior: SnackBarBehavior.floating,
+          action: SnackBarAction(
+            label: 'Dismiss',
+            textColor: Colors.white,
+            onPressed: () {
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            },
+          ),
+        ),
+      );
+  }
+
+  /// Show error/failure toast notification (red background)
+  static void showFailureToast(BuildContext context, String message) {
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Row(
+            children: [
+              const Icon(Icons.error, color: Colors.white),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  message,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          backgroundColor: Colors.red.shade600,
+          duration: const Duration(seconds: 4),
+          behavior: SnackBarBehavior.floating,
+          action: SnackBarAction(
+            label: 'Dismiss',
+            textColor: Colors.white,
+            onPressed: () {
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            },
+          ),
+        ),
+      );
+  }
+
+  /// Show info toast notification (blue background)
+  static void showInfoToast(BuildContext context, String message) {
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Row(
+            children: [
+              const Icon(Icons.info, color: Colors.white),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  message,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          backgroundColor: Colors.blue.shade600,
+          duration: const Duration(seconds: 3),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+  }
+}
+```
+
+### ErrorMessages Standardization Class
+```dart
+// MANDATORY: Standardized error messages for consistency
+class ErrorMessages {
+  // Network errors
+  static const String networkError = 
+      'Network error. Please check your connection.';
+  static const String requestTimeout = 
+      'Request timed out. Please try again.';
+  static const String serverError = 
+      'Server error. Please try again later.';
+  
+  // Authentication errors
+  static const String authenticationFailed = 
+      'Invalid email or password.';
+  static const String sessionExpired = 
+      'Your session has expired. Please sign in again.';
+  static const String unauthorizedAccess = 
+      'You do not have permission to access this resource.';
+  
+  // Validation errors
+  static const String invalidEmail = 
+      'Please enter a valid email address.';
+  static const String invalidPassword = 
+      'Password must be at least 8 characters.';
+  static const String requiredField = 
+      'This field is required.';
+  
+  // Generic fallbacks
+  static const String unexpectedError = 
+      'An unexpected error occurred. Please try again.';
+  static const String noDataAvailable = 
+      'No data available.';
+  static const String loadingFailed = 
+      'Failed to load data. Please try again.';
+  
+  /// Get user-friendly error message from exception
+  static String fromException(Object error) {
+    final errorString = error.toString().toLowerCase();
+    
+    if (errorString.contains('network') || errorString.contains('socket')) {
+      return networkError;
+    }
+    if (errorString.contains('timeout')) {
+      return requestTimeout;
+    }
+    if (errorString.contains('server') || errorString.contains('500')) {
+      return serverError;
+    }
+    if (errorString.contains('auth') || errorString.contains('401')) {
+      return authenticationFailed;
+    }
+    if (errorString.contains('403')) {
+      return unauthorizedAccess;
+    }
+    
+    return unexpectedError;
+  }
+}
+```
+
+### BlocListener Integration for User Feedback
+```dart
+// MANDATORY: Automatic user feedback on state changes
+// Reference: https://pub.dev/packages/flutter_bloc
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+@RoutePage()
+class LoginScreen extends StatefulWidget implements AutoRouteWrapper {
+  const LoginScreen({super.key});
+
+  @override
+  Widget wrappedRoute(BuildContext context) {
+    return BlocProvider(
+      create: (_) => getIt<AuthCubit>(),
+      child: this,
+    );
+  }
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return BlocListener<AuthCubit, AuthState>(
+      // Listen only to success and error states
+      listenWhen: (previous, current) {
+        return current is AuthSuccess || current is AuthFailure;
+      },
+      listener: (context, state) {
+        // Show success toast and navigate
+        if (state is AuthSuccess) {
+          GlobalSnackbar.showSuccessToast(
+            context, 
+            'Welcome back, ${state.user.name}!',
+          );
+          // Navigate to home
+          context.router.replaceAll([const HomeRoute()]);
+        }
+        
+        // Show error toast
+        if (state is AuthFailure) {
+          GlobalSnackbar.showFailureToast(context, state.error);
+        }
+      },
+      child: Scaffold(
+        appBar: AppBar(title: const Text('Sign In')),
+        body: BlocBuilder<AuthCubit, AuthState>(
+          builder: (context, state) {
+            final isLoading = state is AuthLoading;
+            
+            return Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Email field
+                  TextField(
+                    decoration: const InputDecoration(
+                      labelText: 'Email',
+                      prefixIcon: Icon(Icons.email),
+                    ),
+                    onChanged: (value) {
+                      context.read<AuthCubit>().updateEmail(value);
+                    },
+                  ),
+                  const SizedBox(height: 16),
+                  
+                  // Password field
+                  TextField(
+                    decoration: const InputDecoration(
+                      labelText: 'Password',
+                      prefixIcon: Icon(Icons.lock),
+                    ),
+                    obscureText: true,
+                    onChanged: (value) {
+                      context.read<AuthCubit>().updatePassword(value);
+                    },
+                  ),
+                  const SizedBox(height: 24),
+                  
+                  // Sign in button with loading state
+                  ElevatedButton(
+                    onPressed: isLoading 
+                        ? null 
+                        : () => context.read<AuthCubit>().signIn(),
+                    child: isLoading
+                        ? const SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
+                        : const Text('Sign In'),
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+```
+
+### Cubit Implementation with ErrorMessages
+```dart
+// MANDATORY: Use ErrorMessages for consistent error handling
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
+
+sealed class AuthState extends Equatable {
+  const AuthState();
+  @override
+  List<Object?> get props => [];
+}
+
+class AuthInitial extends AuthState {}
+class AuthLoading extends AuthState {}
+
+class AuthSuccess extends AuthState {
+  final User user;
+  const AuthSuccess(this.user);
+  @override
+  List<Object?> get props => [user];
+}
+
+class AuthFailure extends AuthState {
+  final String error;
+  const AuthFailure(this.error);
+  @override
+  List<Object?> get props => [error];
+}
+
+@injectable
+class AuthCubit extends Cubit<AuthState> {
+  final AuthRepo _authRepo;
+  
+  String _email = '';
+  String _password = '';
+
+  AuthCubit(this._authRepo) : super(AuthInitial());
+
+  void updateEmail(String email) => _email = email;
+  void updatePassword(String password) => _password = password;
+
+  Future<void> signIn() async {
+    // Validate inputs
+    if (_email.isEmpty || _password.isEmpty) {
+      emit(const AuthFailure(ErrorMessages.requiredField));
+      return;
+    }
+    
+    if (!_email.contains('@')) {
+      emit(const AuthFailure(ErrorMessages.invalidEmail));
+      return;
+    }
+
+    emit(AuthLoading());
+    
+    try {
+      final response = await _authRepo.signIn(_email, _password);
+      
+      if (response != null && response.success) {
+        emit(AuthSuccess(response.user!));
+      } else {
+        emit(AuthFailure(
+          response?.message ?? ErrorMessages.authenticationFailed,
+        ));
+      }
+    } catch (e) {
+      // Use standardized error messages
+      emit(AuthFailure(ErrorMessages.fromException(e)));
+    }
+  }
+
+  Future<void> signOut() async {
+    emit(AuthLoading());
+    try {
+      await _authRepo.signOut();
+      emit(AuthInitial());
+      // Note: Success toast shown by BlocListener if needed
+    } catch (e) {
+      emit(AuthFailure(ErrorMessages.fromException(e)));
+    }
+  }
+}
+```
+
+### Best Practices for User Notifications
+
+1. **Transient Feedback**: Use GlobalSnackbar for temporary notifications that auto-dismiss
+2. **Consistent Messaging**: Always use ErrorMessages class for standardized error strings
+3. **Visual Hierarchy**: Green for success, red for errors, blue for info
+4. **Action Buttons**: Provide dismiss action for longer messages (>3 seconds)
+5. **BlocListener Pattern**: Automatically show notifications on state changes
+6. **Single Notification**: Always hide current SnackBar before showing new one
+7. **Duration Guidelines**: 
+   - Success: 3 seconds
+   - Error: 4 seconds (users need more time to read errors)
+   - Info: 3 seconds
+8. **Accessibility**: Include icons for visual distinction and screen reader support
+9. **Context Awareness**: Only show notifications for user-triggered actions or critical events
+10. **Avoid Overuse**: Don't show notifications for every minor state change
+
 ## Widget Structure with AutoRoute
 
 ```dart

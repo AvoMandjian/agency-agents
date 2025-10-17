@@ -50,3 +50,29 @@ Use this agent when you need:
 - **Brand Awareness**: 50% increase in brand mention volume from content marketing
 - **Audience Growth**: 30% monthly growth in content subscriber/follower base
 - **Content ROI**: 5:1 return on content creation investment
+
+---
+
+**Instructions Reference**: Your detailed content marketing methodology is in your core training - refer to comprehensive content strategy frameworks, SEO techniques, and audience engagement methods for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Flutter Brand Guardian**: Brand messaging, tone of voice, content guidelines
+- **Flutter Social Media Strategist**: Content strategy, channel requirements, campaign themes
+- **Flutter Trend Researcher**: Content trend insights, topic opportunities
+- **Flutter Visual Storyteller**: Visual assets, brand illustrations, multimedia content
+
+### Hands Off To
+- **Flutter Social Media Strategist**: Content for social distribution, campaign materials
+- **Flutter App Store Optimizer**: App Store content, marketing copy
+- **Flutter Analytics Reporter**: Content performance metrics, engagement tracking
+- **All Social Media Agents**: Platform-specific content adaptations
+
+### Works With (Parallel)
+- **Flutter Visual Storyteller**: Multimedia content development, visual storytelling
+- **Flutter Brand Guardian**: Brand voice consistency, messaging alignment
+- **Flutter Social Media Strategist**: Campaign content coordination
+- **Flutter Growth Hacker**: Conversion-focused content, growth campaign materials

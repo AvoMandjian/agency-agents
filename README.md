@@ -23,14 +23,187 @@
 
 ## ⚡ Quick Start
 
-### Option 1: Use with Claude Code (Recommended)
+### Step 1: Choose Your Agent
+
+Use the **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** one-page agent selector to find the right agent for your task.
+
+### Step 2: Learn Agent Usage
+
+Read **[USAGE_GUIDE.md](./USAGE_GUIDE.md)** for:
+- How to work with agents in Cursor IDE
+- 10+ real-world usage scenarios
+- Best practices for effective prompts
+- Troubleshooting common issues
+
+### Step 3: Use Pre-Defined Workflows
+
+Check **[AGENT_WORKFLOWS.md](./AGENT_WORKFLOWS.md)** for:
+- MVP Development (2 weeks, 7 agents)
+- Feature Development (1 week, 5 agents)
+- Performance Optimization (2-3 days, 4 agents)
+- Testing & Validation (3-5 days, 6 agents)
+- Marketing Campaign (1-2 weeks, 5-8 agents)
+
+### Step 4: Reference Patterns & Conventions
+
+Use **[.templates/flutter-patterns.md](./.templates/flutter-patterns.md)** for:
+- BLoC pattern with sealed classes
+- Repository pattern with injected NetworkService
+- GetIt/Injectable dependency injection
+- GlobalSnackbar user notifications
+- ErrorMessages standardization
+- Storage patterns (hive_ce, biometric_storage)
+
+---
+
+## 📚 Complete Documentation
+
+### Essential Guides
+- **[USAGE_GUIDE.md](./USAGE_GUIDE.md)** - How to use agents effectively (10+ scenarios)
+- **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** - One-page agent selector cheat sheet
+- **[TESTING_VALIDATION_GUIDE.md](./TESTING_VALIDATION_GUIDE.md)** - Quality assurance procedures
+- **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** - Common issues and solutions
+
+### Workflow & Teams
+- **[AGENT_WORKFLOWS.md](./AGENT_WORKFLOWS.md)** - 5 mermaid workflow diagrams
+- **[AGENT_COMBINATIONS.md](./AGENT_COMBINATIONS.md)** - Pre-defined agent teams (MVP Squad, Feature Factory, etc.)
+- **[SUCCESS_STORIES.md](./SUCCESS_STORIES.md)** - Real-world usage examples
+
+### Technical References
+- **[.templates/flutter-patterns.md](./.templates/flutter-patterns.md)** - Complete Flutter pattern library
+- **[.templates/PACKAGES_REFERENCE.md](./.templates/PACKAGES_REFERENCE.md)** - All packages with migration guides
+- **[.templates/VERSION_LOCK_STRATEGY.md](./.templates/VERSION_LOCK_STRATEGY.md)** - Version management
+- **[.templates/PERFORMANCE_BASELINES.md](./.templates/PERFORMANCE_BASELINES.md)** - Performance standards
+- **[.templates/ERROR_HANDLING_GUIDE.md](./.templates/ERROR_HANDLING_GUIDE.md)** - Error handling patterns
+
+### Operations
+- **[MASON_BRICK_RESPONSIBILITIES.md](./MASON_BRICK_RESPONSIBILITIES.md)** - Brick ownership and maintenance
+- **[INDEX.md](./INDEX.md)** - Complete documentation map
+
+---
+
+## 🧱 Mason Brick Integration
+
+All engineering and PM agents integrate with Mason bricks for rapid development:
+
+### Available Bricks
+
+1. **flutter_init** - Complete Flutter + Serverpod project
+   - Full-stack setup with backend
+   - Firebase Analytics + Crashlytics
+   - BLoC pattern pre-configured
+   - **Usage**: `mason make flutter_init --projectName my_app`
+
+2. **flutter_init_no_backend** - Flutter-only project
+   - Frontend architecture without Serverpod
+   - Local auth simulation
+   - **Usage**: `mason make flutter_init_no_backend --projectName my_app`
+
+3. **new_screen** - Screen + Cubit + AutoRoute
+   - Generates screen file
+   - Creates cubit with sealed states
+   - Updates AutoRoute navigation
+   - **Usage**: `mason make new_screen --screenName product_detail`
+
+4. **new_cubit** - BLoC cubit with sealed states
+   - Sealed state classes
+   - Equatable integration
+   - **Usage**: `mason make new_cubit --cubitName user_profile`
+
+### Brick Usage by Agent
+
+- **Frontend Developer**: Uses `new_screen`, `new_cubit` for rapid feature development
+- **Mobile App Builder**: Uses `flutter_init_no_backend` for cross-platform projects
+- **Rapid Prototyper**: PRIMARY user of `flutter_init` for 2-week MVPs
+- **Backend Architect**: Serverpod structure from `flutter_init` provides foundation
+- **Senior PM**: References brick workflows for realistic timeline estimation
+
+### Generated Code Examples
+
+**After `mason make new_screen --screenName login`**:
+```
+lib/
+├── screens/
+│   └── login_screen.dart           # Screen with BlocProvider
+├── cubits/
+│   └── app_cubits/
+│       └── login_cubit/
+│           ├── cubit.dart          # Cubit with business logic
+│           └── state.dart          # Sealed state classes
+└── routes/
+    └── app_router.dart             # Updated with LoginRoute
+```
+
+**Post-Generation Workflow**:
+1. Run `dart run build_runner build` (generates routes, DI)
+2. Implement repository for data layer
+3. Add API integration
+4. Customize UI with shadcn_flutter components
+5. Test with `flutter test`
+
+### Brick Maintenance
+
+See **[MASON_BRICK_RESPONSIBILITIES.md](./MASON_BRICK_RESPONSIBILITIES.md)** for:
+- Brick ownership matrix
+- Maintenance workflows
+- Quality standards
+- Update procedures
+
+---
+
+## 🎯 FAQ
+
+### Q: Which agent should I use for building a new Flutter screen?
+
+**A**: Use **Flutter Frontend Developer** (`engineering-frontend-developer.md`). This agent specializes in:
+- Building screens with BLoC pattern and sealed states
+- Integrating shadcn_flutter components
+- AutoRoute navigation setup
+- GlobalSnackbar user feedback
+- Repository pattern with injected NetworkService
+
+### Q: How do I coordinate multiple agents for a complex project?
+
+**A**: Use **Agents Orchestrator** (`specialized/agents-orchestrator.md`) or follow pre-defined workflows in **[AGENT_WORKFLOWS.md](./AGENT_WORKFLOWS.md)**. For example, MVP development uses 7 agents in sequence.
+
+### Q: What if an agent provides incorrect or outdated guidance?
+
+**A**: Reference **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** for common issues. Always provide agents with:
+- `@agency-agents/.templates/flutter-patterns.md` for conventions
+- `@memory_bank_dual/rules/memory-bank.mdc` for project context
+- Specific Flutter version and package versions
+
+### Q: How do I ensure agent-generated code follows my project conventions?
+
+**A**: Always reference **[.templates/flutter-patterns.md](./.templates/flutter-patterns.md)** in your prompts. This contains all standardized patterns:
+- BLoC with sealed classes
+- Repository with @lazySingleton and injected NetworkService
+- GetIt/Injectable DI
+- GlobalSnackbar + ErrorMessages
+- Storage patterns (hive_ce, biometric_storage)
+
+### Q: Can I modify agents for my team's specific needs?
+
+**A**: Yes! All agents are open-source (MIT License). Fork the repository and customize agent personalities, workflows, and technical patterns for your team. See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for guidelines.
+
+### Q: How do Mason bricks integrate with agents?
+
+**A**: Engineering agents reference Mason bricks for rapid code generation. See **[MASON_BRICK_RESPONSIBILITIES.md](./MASON_BRICK_RESPONSIBILITIES.md)** for complete brick usage, maintenance, and agent ownership.
+
+---
+
+## Option 1: Use with Cursor IDE (Recommended)
 
 ```bash
-# Copy agents to your Claude Code directory
-cp -r agency-agents/* ~/.claude/agents/
+# Reference agents using @ mention in Cursor:
+@agency-agents/engineering/engineering-frontend-developer.md
+@agency-agents/.templates/flutter-patterns.md
 
-# Now activate any agent in your Claude Code sessions:
-# "Hey Claude, activate Frontend Developer mode and help me build a React component"
+# Provide context:
+@memory_bank_dual/rules/memory-bank.mdc
+
+# Make your request:
+"Create a product list screen following our BLoC patterns..."
 ```
 
 ### Option 2: Use as Reference
@@ -38,7 +211,7 @@ cp -r agency-agents/* ~/.claude/agents/
 Each agent file contains:
 - Identity & personality traits
 - Core mission & workflows
-- Technical deliverables with code examples
+- Technical deliverables with Flutter/Dart code examples
 - Success metrics & communication style
 
 Browse the agents below and copy/adapt the ones you need!

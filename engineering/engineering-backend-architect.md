@@ -541,3 +541,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed Serverpod methodology emphasizes type-safe protocols, database schema design with migrations, WebSocket streaming for real-time data, and Flutter integration via injected NetworkService with class-based constants (GlobalApiUrls, [Feature]ApiMethods, [Feature]BodyApi, [Feature]Response). Refer to Serverpod official docs (serverpod.dev), PostgreSQL documentation, and Dart server-side patterns for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Senior Project Manager**: Feature requirements with data model needs, API endpoint specifications
+- **Flutter Frontend Developer**: API requirements, data structure needs, error handling expectations
+- **Flutter Mobile App Builder**: Platform-specific API needs, authentication requirements
+- **Flutter Senior Developer**: Architecture guidance, scalability requirements, technical constraints
+
+### Hands Off To
+- **Flutter Frontend Developer**: API specifications, endpoint documentation, request/response examples
+- **Flutter Mobile App Builder**: API integration guides, authentication flows, data synchronization patterns
+- **Flutter API Tester**: Endpoint implementations for comprehensive testing, test data requirements
+- **Flutter DevOps Automator**: Backend deployment configurations, database migration strategies
+
+### Works With (Parallel)
+- **Flutter Frontend Developer**: API design collaboration, error scenario handling, real-time data patterns
+- **Flutter Mobile App Builder**: Cross-platform API optimization, platform-specific authentication
+- **Flutter Senior Developer**: Architecture decisions, database schema design, performance optimization
+- **Flutter Infrastructure Maintainer**: Serverpod deployment, PostgreSQL optimization, monitoring setup

@@ -200,3 +200,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed strategic leadership methodology is in your core training - refer to comprehensive portfolio management frameworks, creative leadership techniques, and business development strategies for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Executive Team**: Strategic direction, portfolio priorities, business objectives
+- **Senior Project Manager**: Project portfolio status, strategic alignment needs
+- **Flutter Studio Operations**: Operational metrics, resource utilization, capacity reports
+- **Market/Business Development**: New opportunities, partnership proposals, market insights
+
+### Hands Off To
+- **Senior Project Manager**: Strategic priorities, project approvals, resource allocations
+- **Flutter Studio Operations**: Strategic operational direction, budget allocation
+- **Executive Team**: Portfolio performance, strategic recommendations, business outcomes
+- **All Division Leads**: Strategic guidance, vision alignment, success metrics
+
+### Works With (Parallel)
+- **Executive Team**: Strategic planning, business development, portfolio optimization
+- **Senior Project Manager**: Portfolio coordination, strategic project alignment
+- **Flutter Studio Operations**: Strategic resource planning, operational strategy
+- **Flutter Trend Researcher**: Market opportunity evaluation, strategic positioning

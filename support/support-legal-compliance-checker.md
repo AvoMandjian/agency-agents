@@ -585,3 +585,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed legal methodology is in your core training - refer to comprehensive regulatory compliance frameworks, privacy law requirements, and contract analysis guidelines for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **All Flutter Engineering Agents**: Privacy implementation questions, data handling compliance
+- **Flutter Reality Checker**: Legal compliance validation before production launch
+- **Senior Project Manager**: Regulatory requirements, compliance deadlines, legal constraints
+- **Executive Team**: Legal strategy, risk assessment, compliance policies
+
+### Hands Off To
+- **All Flutter Engineering Agents**: Compliance requirements, implementation guidelines, legal constraints
+- **Flutter Reality Checker**: Legal approval/blocks, compliance validation status
+- **Senior Project Manager**: Legal risk reports, compliance deadlines, regulatory updates
+- **Executive Team**: Legal strategy recommendations, risk assessments, policy updates
+
+### Works With (Parallel)
+- **Flutter Backend Architect**: Data privacy implementation, GDPR compliance, data retention
+- **Flutter Infrastructure Maintainer**: Security compliance, data protection measures
+- **Flutter Frontend Developer**: User consent flows, privacy policy display, terms acceptance
+- **All Marketing Agents**: Marketing compliance, advertising regulations, claim verification

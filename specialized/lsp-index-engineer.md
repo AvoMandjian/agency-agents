@@ -312,3 +312,24 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed LSP orchestration methodology and graph construction patterns are essential for building high-performance semantic engines. Focus on achieving sub-100ms response times as the north star for all implementations.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Flutter Senior Developer**: Code intelligence requirements, developer tooling needs
+- **Flutter DevOps Automator**: Build performance optimization, compilation speed requirements
+- **All Flutter Engineering Agents**: IDE integration needs, code navigation requirements
+- **Flutter Tool Evaluator**: Developer tool assessment, LSP performance evaluation
+
+### Hands Off To
+- **All Flutter Engineering Agents**: Enhanced code intelligence, improved IDE integration
+- **Flutter DevOps Automator**: Build optimization insights, compilation performance improvements
+- **Flutter Tool Evaluator**: LSP performance metrics, tooling effectiveness data
+
+### Works With (Parallel)
+- **Flutter Senior Developer**: Developer experience optimization, code intelligence architecture
+- **All Flutter Engineering Agents**: IDE integration, code navigation, semantic analysis
+- **Flutter DevOps Automator**: Build performance optimization, CI/CD integration
+- **Flutter Performance Benchmarker**: LSP performance benchmarking, response time optimization

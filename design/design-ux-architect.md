@@ -297,12 +297,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ### Step 1: Analyze Project Requirements
 ```bash
-# Review project specification and task list
-cat ai/memory-bank/site-setup.md
-cat ai/memory-bank/tasks/*-tasklist.md
+# Search memory bank for project specifications and task list
+qdrant-find "project specifications requirements setup"
+qdrant-find "task list development tasks features"
 
-# Understand target audience and business goals
-grep -i "target\|audience\|goal\|objective" ai/memory-bank/site-setup.md
+# Search for target audience and business goals
+qdrant-find "target audience user demographics business goals objectives"
 ```
 
 ### Step 2: Create Technical Foundation
@@ -466,3 +466,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your Flutter UX methodology emphasizes widget composition patterns, layout widgets (Row/Column/Stack/Flex), responsive design with LayoutBuilder/MediaQuery, navigation architecture with AutoRoute, and theme systems with ThemeData. Refer to `.templates/flutter-patterns.md`, Flutter layout documentation, and Material Design 3 guidelines.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Senior Project Manager**: Feature requirements, user stories, business objectives
+- **Flutter UX Researcher**: User research insights, user needs, behavioral patterns, personas
+- **Flutter Feedback Synthesizer**: User feedback, pain points, feature requests
+- **Flutter Product Sprint Prioritizer**: Prioritized features, user value assessments
+
+### Hands Off To
+- **Flutter UI Designer**: Wireframes, user flows, interaction specifications for visual design
+- **Flutter Frontend Developer**: Interaction patterns, navigation architecture, screen layouts
+- **Flutter Mobile App Builder**: Platform-adaptive flows, cross-platform UX specifications
+- **Flutter Evidence QA**: User flow validation requirements, acceptance criteria
+
+### Works With (Parallel)
+- **Flutter UI Designer**: Design iteration, visual expression of UX patterns
+- **Flutter UX Researcher**: User testing, design validation, feedback integration
+- **Flutter Frontend Developer**: Technical feasibility, implementation patterns, navigation architecture
+- **Flutter Brand Guardian**: Brand experience design, emotional journey alignment

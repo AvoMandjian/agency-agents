@@ -244,6 +244,135 @@ Advanced techniques and approaches the agent masters
 
 ---
 
+## 🎯 Flutter-Specific Agent Contribution Guidelines
+
+### Flutter Agent Requirements
+
+When creating or updating Flutter-specialized agents, ensure:
+
+1. **Convention Compliance**
+   - [ ] Follows patterns in `.templates/flutter-patterns.md`
+   - [ ] Uses BLoC pattern with sealed classes
+   - [ ] Implements repository pattern with @lazySingleton and injected NetworkService
+   - [ ] Includes GetIt/Injectable DI patterns
+   - [ ] Uses GlobalSnackbar for user feedback
+   - [ ] Includes ErrorMessages standardization
+
+2. **Package References**
+   - [ ] Only references packages from `.templates/PACKAGES_REFERENCE.md`
+   - [ ] Uses correct package versions
+   - [ ] Follows VERSION_LOCK_STRATEGY.md for version constraints
+   - [ ] Includes package import examples in code snippets
+
+3. **Code Quality**
+   - [ ] All code examples compile without errors
+   - [ ] Follows Dart/Flutter official style guide
+   - [ ] Includes proper null safety
+   - [ ] Has comprehensive error handling
+   - [ ] Includes test examples (bloc_test, widget tests)
+
+4. **Mason Brick Integration** (for Engineering/PM agents)
+   - [ ] References appropriate Mason bricks
+   - [ ] Includes brick usage examples
+   - [ ] Shows post-generation workflows
+   - [ ] Aligns with MASON_BRICK_RESPONSIBILITIES.md
+
+5. **Performance Awareness**
+   - [ ] Follows PERFORMANCE_BASELINES.md targets
+   - [ ] Includes performance considerations
+   - [ ] Mentions optimization strategies
+   - [ ] References 60fps, <2s startup, <150MB memory standards
+
+### Testing New Flutter Agents
+
+**Before submitting agent PR**:
+
+1. **Validation Test**
+   ```bash
+   # Use the agent to generate real Flutter code
+   # Verify code compiles:
+   flutter analyze
+   flutter test
+   flutter build apk --debug
+   ```
+
+2. **Convention Test**
+   - [ ] Generated code uses sealed classes for states
+   - [ ] Repository uses @lazySingleton with injected NetworkService
+   - [ ] Cubit uses @injectable annotation
+   - [ ] Screen uses getIt<Cubit>() in BlocProvider
+   - [ ] Includes GlobalSnackbar in BlocListener
+
+3. **Integration Test**
+   - [ ] Test agent in real project context
+   - [ ] Verify integrates with existing code
+   - [ ] Check against memory_bank_dual conventions
+   - [ ] Validate handoff sections (receives/hands-off/works-with)
+
+4. **Quality Metrics**
+   - [ ] Meets success metrics defined in agent
+   - [ ] Produces code that passes Reality Checker validation
+   - [ ] Generates test coverage >80%
+   - [ ] Performance meets baselines
+
+### Flutter Agent Validation Checklist
+
+☐ **Architecture Compliance**
+  - ☐ BLoC pattern with sealed states
+  - ☐ Repository with injected NetworkService
+  - ☐ GetIt/Injectable DI (@injectable, @lazySingleton)
+  - ☐ AutoRoute navigation
+
+☐ **Storage Compliance**
+  - ☐ biometric_storage for sensitive data
+  - ☐ hive_ce for non-sensitive data
+  - ☐ No SharedPreferences for critical data
+
+☐ **UI/UX Compliance**
+  - ☐ GlobalSnackbar for user feedback
+  - ☐ ErrorMessages for standardized errors
+  - ☐ shadcn_flutter or Material Design 3 components
+  - ☐ WCAG AA accessibility
+
+☐ **Testing Compliance**
+  - ☐ bloc_test for cubit testing
+  - ☐ mocktail for mocking
+  - ☐ Widget tests included
+  - ☐ >80% coverage target
+
+☐ **Documentation Compliance**
+  - ☐ Agent Handoffs section (receives/hands-off/works-with)
+  - ☐ References to flutter-patterns.md
+  - ☐ Flutter-specific success metrics
+  - ☐ Links to official Flutter/Dart documentation
+
+### Flutter Convention Validation
+
+**Run these checks before submitting**:
+
+```bash
+# 1. Check agent references correct patterns
+grep -i "sharedpreferences\|provider\|riverpod" [your-agent].md
+# Should return empty (we use hive_ce and flutter_bloc)
+
+# 2. Check DI pattern mentions
+grep -i "getit\|injectable" [your-agent].md
+# Should have references to GetIt/Injectable
+
+# 3. Check storage pattern mentions
+grep -i "hive_ce\|biometric_storage" [your-agent].md
+# Should reference both for appropriate use cases
+
+# 4. Check for agent handoffs
+grep "## 🤝 Agent Handoffs" [your-agent].md
+# Should be present for all agents
+
+# 5. Validate against flutter-patterns.md
+# Manually verify agent code examples match patterns
+```
+
+---
+
 ## 📐 Style Guide
 
 ### Writing Style

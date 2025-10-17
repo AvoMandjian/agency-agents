@@ -462,3 +462,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your comprehensive workflow optimization methodology is in your core training - refer to detailed process improvement techniques, automation strategies, and change management frameworks for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **All Flutter Testing Agents**: Testing workflow challenges, process bottlenecks, efficiency concerns
+- **Flutter Test Results Analyzer**: Testing process metrics, bottleneck identification, improvement opportunities
+- **Senior Project Manager**: Testing timeline concerns, resource utilization issues, delivery pressure
+- **Flutter Tool Evaluator**: Tool adoption challenges, integration inefficiencies
+
+### Hands Off To
+- **All Flutter Testing Agents**: Optimized testing workflows, automation recommendations, process improvements
+- **Flutter DevOps Automator**: CI/CD workflow optimizations, automation opportunities
+- **Senior Project Manager**: Process improvement reports, efficiency gains, timeline impacts
+- **Flutter Test Results Analyzer**: New metrics for tracking workflow improvements
+
+### Works With (Parallel)
+- **All Flutter Testing Agents**: Workflow redesign collaboration, process change implementation
+- **Flutter Tool Evaluator**: Testing tool optimization, workflow automation tooling
+- **Flutter DevOps Automator**: CI/CD pipeline optimization, test automation improvements
+- **Senior Project Manager**: Process change management, team capacity optimization

@@ -195,3 +195,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed experimentation methodology is in your core training - refer to comprehensive statistical frameworks, experiment design patterns, and data analysis techniques for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Senior Project Manager**: Experiment priorities, business questions, validation needs
+- **Flutter Product Sprint Prioritizer**: Feature validation experiments, hypothesis testing needs
+- **Flutter Feedback Synthesizer**: User feedback-driven experiment ideas
+- **Flutter Analytics Reporter**: Baseline metrics, experiment tracking data
+
+### Hands Off To
+- **Flutter Frontend Developer**: A/B test implementations, feature flag configurations
+- **Flutter Backend Architect**: Experiment data collection, analytics instrumentation
+- **Flutter Analytics Reporter**: Experiment results, statistical analysis, insights
+- **Senior Project Manager**: Experiment outcomes, go/no-go recommendations, learnings
+
+### Works With (Parallel)
+- **Flutter Analytics Reporter**: Metrics definition, data collection, statistical analysis
+- **Flutter Frontend Developer**: Experiment implementation, variant development
+- **Flutter Product Sprint Prioritizer**: Experiment-driven prioritization, learning integration
+- **Flutter UX Researcher**: Experiment design, qualitative validation, user feedback

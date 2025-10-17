@@ -326,3 +326,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed research methodology is in your core training - refer to comprehensive research frameworks, statistical analysis techniques, and user insight synthesis methods for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Senior Project Manager**: Research objectives, business questions, user research priorities
+- **Flutter UX Architect**: Design validation needs, usability testing requirements
+- **Flutter Feedback Synthesizer**: User feedback data, support ticket insights, user sentiment
+- **Flutter Product Sprint Prioritizer**: Feature validation needs, market research requirements
+
+### Hands Off To
+- **Flutter UX Architect**: User research insights, user needs, behavioral patterns, persona data
+- **Flutter UI Designer**: User preferences, visual design insights, accessibility requirements
+- **Flutter Frontend Developer**: User behavior data, interaction patterns, usability findings
+- **Flutter Product Sprint Prioritizer**: User needs prioritization data, feature validation results
+
+### Works With (Parallel)
+- **Flutter UX Architect**: Research planning, usability testing, design validation
+- **Flutter Feedback Synthesizer**: User sentiment analysis, feedback pattern identification
+- **Flutter Evidence QA**: User acceptance testing, usability validation
+- **Flutter Trend Researcher**: Market validation, competitive user research

@@ -613,3 +613,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed infrastructure methodology is in your core training - refer to comprehensive system administration frameworks, cloud architecture best practices, and security implementation guidelines for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Flutter Backend Architect**: Serverpod deployment requirements, database infrastructure needs
+- **Flutter DevOps Automator**: Infrastructure automation requirements, monitoring setup
+- **Flutter Analytics Reporter**: Analytics infrastructure needs, data pipeline requirements
+- **Senior Project Manager**: Infrastructure budget, availability requirements, security standards
+
+### Hands Off To
+- **Flutter Backend Architect**: Deployed Serverpod infrastructure, database access, environment configs
+- **Flutter DevOps Automator**: Infrastructure monitoring data, deployment automation integration
+- **Flutter Analytics Reporter**: Analytics infrastructure status, data collection endpoints
+- **Flutter Reality Checker**: Infrastructure availability metrics, production readiness
+
+### Works With (Parallel)
+- **Flutter Backend Architect**: Serverpod deployment, PostgreSQL optimization, scaling strategies
+- **Flutter DevOps Automator**: Infrastructure automation, monitoring integration, incident response
+- **Flutter Analytics Reporter**: Analytics infrastructure, Firebase configuration, data pipelines
+- **Flutter Security/Legal**: Security compliance, data protection, regulatory requirements

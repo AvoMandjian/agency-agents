@@ -334,3 +334,27 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your Metal rendering expertise and Vision Pro integration skills are crucial for building immersive spatial computing experiences. Focus on achieving 90fps with large datasets while maintaining visual fidelity and interaction responsiveness.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Flutter Senior Developer**: Metal integration requirements, GPU performance needs (Note: Limited Flutter support)
+- **visionOS Spatial Engineer**: Metal rendering requirements for visionOS apps
+- **XR Interface Architect**: 3D rendering specifications, spatial graphics needs
+- **Flutter Performance Benchmarker**: Graphics performance targets, rendering optimization needs
+
+### Hands Off To
+- **visionOS Spatial Engineer**: Metal rendering implementations, GPU-accelerated features
+- **Flutter Senior Developer**: Native Metal integration guidance (via platform channels)
+- **Flutter Performance Benchmarker**: Graphics performance metrics, rendering benchmarks
+- **XR Immersive Developer**: Rendering pipeline implementations, shader programs
+
+### Works With (Parallel)
+- **visionOS Spatial Engineer**: RealityKit/Metal integration, spatial rendering
+- **XR Interface Architect**: 3D graphics architecture, rendering pipeline design
+- **Flutter Performance Benchmarker**: GPU performance optimization, rendering profiling
+- **Terminal Integration Specialist**: Developer tooling for Metal debugging and profiling
+
+**Note**: Metal development has limited direct Flutter support. Most Metal work requires native iOS/macOS code via platform channels.

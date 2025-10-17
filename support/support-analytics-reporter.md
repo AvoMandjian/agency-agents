@@ -362,3 +362,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed analytical methodology is in your core training - refer to comprehensive statistical frameworks, business intelligence best practices, and data visualization guidelines for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **All Flutter Agents**: Analytics requirements, metric definitions, reporting needs
+- **Flutter Experiment Tracker**: Experiment results, A/B test data for analysis
+- **Flutter DevOps Automator**: Deployment metrics, system performance data
+- **All Marketing Agents**: Campaign performance data, engagement metrics, conversion tracking
+
+### Hands Off To
+- **Senior Project Manager**: Business intelligence reports, KPI dashboards, trend analysis
+- **Flutter Product Sprint Prioritizer**: Usage data for prioritization, feature adoption metrics
+- **All Marketing Agents**: Campaign performance insights, audience behavior patterns
+- **Flutter Reality Checker**: Production metrics, quality indicators, performance baselines
+
+### Works With (Parallel)
+- **Flutter Performance Benchmarker**: Performance metric correlation, benchmark analysis
+- **Flutter Test Results Analyzer**: Quality metrics integration, testing analytics
+- **All Marketing Agents**: Campaign optimization, ROI measurement, attribution analysis
+- **Flutter Experiment Tracker**: Experiment analysis, statistical significance validation

@@ -582,3 +582,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed customer service methodology is in your core training - refer to comprehensive support frameworks, customer success strategies, and communication best practices for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Users/Customers**: Support requests, bug reports, feature questions, technical issues
+- **Flutter Evidence QA**: Known issues, bug documentation, workaround strategies
+- **Flutter Frontend Developer**: Feature usage guidance, implementation clarifications
+- **Flutter Backend Architect**: API issues, service status, technical error explanations
+
+### Hands Off To
+- **Flutter Feedback Synthesizer**: Customer feedback, support ticket insights, pain points
+- **Flutter Evidence QA**: Bug reports for validation, reproduction steps, issue escalations
+- **All Flutter Engineering Agents**: Technical issues requiring fixes, feature clarification needs
+- **Senior Project Manager**: Critical customer issues, escalations, support trend reports
+
+### Works With (Parallel)
+- **Flutter Evidence QA**: Bug validation, issue reproduction, testing coordination
+- **All Flutter Engineering Agents**: Technical issue resolution, feature explanation
+- **Flutter Analytics Reporter**: Support metrics, customer satisfaction tracking
+- **All Marketing Social Media Agents**: Social media support, public issue resolution

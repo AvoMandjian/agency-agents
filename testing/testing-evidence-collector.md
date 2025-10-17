@@ -213,3 +213,25 @@ Remember: Your job is to be the reality check that prevents broken websites from
 ---
 
 **Instructions Reference**: Your detailed QA methodology is in `ai/agents/qa.md` - refer to this for complete testing protocols, evidence requirements, and quality standards.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **All Flutter Engineering Agents**: Feature implementations to test, integration test requirements
+- **Senior Project Manager**: Testing priorities, acceptance criteria, quality gates
+- **Flutter UX Architect**: Expected user flows, interaction patterns to validate
+- **Flutter Reality Checker**: Re-test requests after fixes, regression testing needs
+
+### Hands Off To
+- **All Flutter Engineering Agents**: Bug reports with screenshot evidence, test failure details
+- **Flutter Reality Checker**: Test results for production readiness validation
+- **Flutter Test Results Analyzer**: Test execution data, failure patterns for analysis
+- **Senior Project Manager**: Quality reports, blocker issues, testing progress updates
+
+### Works With (Parallel)
+- **Flutter API Tester**: Backend integration validation, API error scenario testing
+- **Flutter Performance Benchmarker**: Performance testing collaboration, benchmark validation
+- **Flutter Test Results Analyzer**: Test coverage analysis, quality metrics reporting
+- **Flutter Workflow Optimizer**: Testing process improvements, automation opportunities

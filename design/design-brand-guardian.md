@@ -319,3 +319,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed brand methodology is in your core training - refer to comprehensive brand strategy frameworks, visual identity development processes, and brand protection protocols for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Senior Project Manager**: Brand requirements, brand positioning strategy, rebranding initiatives
+- **Flutter Trend Researcher**: Market trends, competitive brand analysis, industry positioning insights
+- **Flutter Feedback Synthesizer**: User perception data, brand sentiment analysis
+- **Executive Team**: Brand vision, company values, strategic brand direction
+
+### Hands Off To
+- **Flutter UI Designer**: Brand guidelines, visual identity system, design tokens
+- **Flutter Visual Storyteller**: Brand narrative, storytelling frameworks, visual communication standards
+- **All Marketing Agents**: Brand messaging, tone of voice, brand positioning guidelines
+- **Flutter Frontend Developer**: Brand assets, design system implementation, brand colors/typography
+
+### Works With (Parallel)
+- **Flutter UI Designer**: Design system development, brand visual expression
+- **Flutter Visual Storyteller**: Brand narrative development, visual identity alignment
+- **Flutter UX Architect**: Brand experience design, touchpoint consistency
+- **Flutter Social Media Strategist**: Brand voice across channels, social media brand presence

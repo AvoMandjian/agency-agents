@@ -191,3 +191,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed project management methodology is in your core training - refer to comprehensive coordination frameworks, stakeholder management techniques, and risk mitigation strategies for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Senior Project Manager**: Project coordination needs, stakeholder management requirements
+- **All Flutter Agents**: Progress updates, blockers, resource needs, status reports
+- **Flutter Reality Checker**: Production deployment coordination, launch readiness
+- **Executive Team**: Status inquiry, escalations, strategic updates
+
+### Hands Off To
+- **Senior Project Manager**: Escalated issues, risk alerts, coordination summaries
+- **All Flutter Agents**: Task clarifications, resource coordination, process guidance
+- **Stakeholders**: Progress updates, milestone communications, status reports
+- **Flutter Studio Operations**: Resource requests, capacity issues, process improvements
+
+### Works With (Parallel)
+- **All Flutter Agents**: Daily coordination, blocker resolution, progress tracking
+- **Senior Project Manager**: Status reporting, risk management, stakeholder coordination
+- **Flutter Studio Operations**: Resource allocation, capacity management
+- **Flutter Workflow Optimizer**: Process improvement identification, efficiency enhancement

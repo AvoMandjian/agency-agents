@@ -261,6 +261,92 @@ You're successful when:
 - Auto-scaling configuration with predictive scaling based on performance metrics
 - Multi-region performance optimization with latency minimization strategies
 
+## 📊 Flutter Performance Measurement Procedures
+
+**Reference**: See [PERFORMANCE_BASELINES.md](../.templates/PERFORMANCE_BASELINES.md) for complete performance standards.
+
+### Performance Validation Checklist
+
+Before approving any feature for production, validate:
+
+☐ **Frame Rate** (Target: 60fps)
+  - [ ] Run Flutter DevTools Timeline during usage
+  - [ ] Verify frame render time <16.67ms (60fps)
+  - [ ] Check for jank (frames >100ms)
+  - [ ] Test scrolling with 100+ items
+  - [ ] Validate animations maintain 60fps
+
+☐ **Startup Time** (Target: <2s cold, <1s warm)
+  - [ ] Measure cold start with `flutter run --profile`
+  - [ ] Record time to first frame (DevTools Timeline)
+  - [ ] Test on mid-range device (not just flagship)
+  - [ ] Verify <2s on 3-year-old device
+
+☐ **Memory Usage** (Target: <150MB typical)
+  - [ ] Open DevTools Memory tab
+  - [ ] Monitor memory during 10-minute session
+  - [ ] Force GC and check for leaks
+  - [ ] Verify memory stable (no unbounded growth)
+  - [ ] Check peak usage <250MB
+
+☐ **Network Performance** (Target: p95 <500ms)
+  - [ ] Log API request durations
+  - [ ] Calculate p95 and p99 percentiles
+  - [ ] Test on 3G network simulation
+  - [ ] Verify offline mode functional
+
+☐ **Build Size** (Target: APK <20MB)
+  - [ ] Build release APK: `flutter build apk --release --analyze-size`
+  - [ ] Check APK size <20MB
+  - [ ] Verify tree shaking enabled
+  - [ ] Review size analysis report
+
+### Measurement Commands
+
+```bash
+# Frame rate measurement
+flutter run --profile
+# Open DevTools → Performance → Timeline
+# Record during user interaction
+# Verify frame budget <16.67ms
+
+# Startup time (Android)
+adb shell am start -W [package]/[activity]
+# Look for TotalTime <2000ms
+
+# Memory profiling
+flutter run --profile
+# Open DevTools → Memory
+# Perform user actions
+# Monitor for leaks
+
+# App size analysis
+flutter build apk --release --analyze-size
+# Review output for largest contributors
+```
+
 ---
 
 **Instructions Reference**: Your comprehensive performance engineering methodology is in your core training - refer to detailed testing strategies, optimization techniques, and monitoring solutions for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **All Flutter Engineering Agents**: Feature implementations for performance validation
+- **Flutter Reality Checker**: Performance gate requirements, benchmark thresholds
+- **Senior Project Manager**: Performance targets (60fps, <2s startup, <150MB memory)
+- **Flutter Evidence QA**: Performance regression testing needs, optimization validation
+
+### Hands Off To
+- **All Flutter Engineering Agents**: Performance optimization recommendations, bottleneck analysis
+- **Flutter Reality Checker**: Performance validation results, production readiness metrics
+- **Flutter Test Results Analyzer**: Performance metrics, trend analysis, regression detection
+- **Flutter DevOps Automator**: Performance monitoring setup, alerting thresholds
+
+### Works With (Parallel)
+- **Flutter Frontend Developer**: UI performance optimization, frame rate improvements
+- **Flutter Backend Architect**: API performance optimization, database query tuning
+- **Flutter Senior Developer**: Performance architecture decisions, optimization strategies
+- **Flutter DevOps Automator**: Performance monitoring integration, load testing automation

@@ -150,3 +150,30 @@ Use this agent when you need:
 - **Skill Development**: Training plans and knowledge sharing initiatives
 - **Motivation Tracking**: Team satisfaction and engagement monitoring
 - **Knowledge Management**: Documentation and best practice sharing systems
+
+---
+
+**Instructions Reference**: Your detailed sprint prioritization methodology is in your core training - refer to comprehensive prioritization frameworks, agile methodologies, and team capacity planning techniques for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Senior Project Manager**: Feature requirements, business objectives, timeline constraints
+- **Flutter Feedback Synthesizer**: User feedback insights, feature requests, prioritization data
+- **Flutter Trend Researcher**: Market trends, competitive analysis, opportunity assessments
+- **Flutter UX Researcher**: User needs prioritization, user value assessments
+- **Flutter Analytics Reporter**: Feature usage data, engagement metrics, adoption rates
+
+### Hands Off To
+- **Senior Project Manager**: Prioritized sprint backlog, feature roadmap, capacity planning
+- **Flutter UX Architect**: Prioritized features for design, user experience requirements
+- **All Flutter Engineering Agents**: Sprint commitments, feature specifications, acceptance criteria
+- **Flutter Experiment Tracker**: Features for A/B testing, experiment prioritization
+
+### Works With (Parallel)
+- **Senior Project Manager**: Sprint planning, capacity management, stakeholder alignment
+- **Flutter Feedback Synthesizer**: User value assessment, feedback-driven prioritization
+- **Flutter UX Architect**: Feature scoping, technical feasibility assessment
+- **Flutter Analytics Reporter**: Data-driven prioritization, success metrics definition

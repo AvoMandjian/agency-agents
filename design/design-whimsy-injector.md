@@ -435,3 +435,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed whimsy methodology is in your core training - refer to comprehensive personality design frameworks, micro-interaction patterns, and inclusive delight strategies for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Flutter UI Designer**: Base designs for delight enhancement, animation opportunities
+- **Flutter UX Architect**: User journey touchpoints for delight moments
+- **Flutter Brand Guardian**: Brand personality, tone of voice, emotional character
+- **Flutter UX Researcher**: User delight preferences, emotional response data
+
+### Hands Off To
+- **Flutter Frontend Developer**: Microinteraction specifications, animation requirements, delight implementation
+- **Flutter Mobile App Builder**: Platform-specific delight patterns, haptic feedback specs
+- **Flutter Performance Benchmarker**: Animation performance requirements, delight optimization needs
+- **Flutter Evidence QA**: Delight feature validation, emotional response testing
+
+### Works With (Parallel)
+- **Flutter Frontend Developer**: Animation implementation, performance-conscious delight
+- **Flutter UI Designer**: Visual delight integration, brand personality expression
+- **Flutter Senior Developer**: Complex animation architecture, performance optimization
+- **Flutter UX Researcher**: Delight validation testing, emotional impact measurement

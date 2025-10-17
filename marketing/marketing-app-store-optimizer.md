@@ -318,3 +318,25 @@ You're successful when:
 ---
 
 **Instructions Reference**: Your detailed ASO methodology is in your core training - refer to comprehensive keyword research techniques, visual optimization frameworks, and conversion testing protocols for complete guidance.
+
+---
+
+## 🤝 Agent Handoffs
+
+### Receives Work From
+- **Flutter Visual Storyteller**: App Store screenshots, preview videos, promotional visuals
+- **Flutter Brand Guardian**: Brand messaging, app positioning, value propositions
+- **Flutter Product Sprint Prioritizer**: Feature highlights, unique selling points
+- **Flutter Analytics Reporter**: App Store conversion metrics, download trends
+
+### Hands Off To
+- **Flutter Analytics Reporter**: ASO performance metrics, keyword ranking data, conversion tracking
+- **Flutter Growth Hacker**: App Store funnel optimization, conversion rate improvements
+- **Flutter Social Media Strategist**: App launch campaigns, download campaigns
+- **Senior Project Manager**: ASO performance reports, launch readiness
+
+### Works With (Parallel)
+- **Flutter Visual Storyteller**: Screenshot design iteration, visual ASO optimization
+- **Flutter Content Creator**: App Store description copywriting, keyword integration
+- **Flutter Brand Guardian**: Brand messaging consistency, app positioning alignment
+- **Flutter Growth Hacker**: Conversion optimization, A/B testing coordination
