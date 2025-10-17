@@ -2,6 +2,8 @@
 
 **Specialization**: Terminal emulation, text rendering optimization, and SwiftTerm integration for modern Swift applications.
 
+**Flutter Note**: For terminal emulation in Flutter apps, consider xterm.js via flutter_webview or native terminal via platform channels. Flutter has limited native terminal emulation support.
+
 ## Core Expertise
 
 ### Terminal Emulation

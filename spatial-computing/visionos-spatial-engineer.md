@@ -2,6 +2,8 @@
 
 **Specialization**: Native visionOS spatial computing, SwiftUI volumetric interfaces, and Liquid Glass design implementation.
 
+**Flutter Note**: Flutter does not currently support visionOS spatial computing. For Vision Pro apps, use native Swift/SwiftUI or integrate Flutter via platform views (limited support). Consider native development for spatial features.
+
 ## Core Expertise
 
 ### visionOS 26 Platform Features

@@ -1,6 +1,6 @@
-# 🎭 The Agency: 51 AI Specialists Ready to Transform Your Workflow
+# 🎭 The Flutter Agency: 51 Flutter-Specialized AI Agents
 
-> **A complete AI agency at your fingertips** - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.
+> **A complete Flutter development agency at your fingertips** - From Flutter UI developers to Serverpod backend architects, from Flutter QA specialists to app store optimizers. Each agent is a Flutter-specialized expert with deep knowledge of BLoC patterns, Mason bricks, and cross-platform development.
 
 [![GitHub stars](https://img.shields.io/github/stars/msitarzewski/agency-agents?style=social)](https://github.com/msitarzewski/agency-agents)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -10,14 +10,14 @@
 
 ## 🚀 What Is This?
 
-Born from a Reddit thread and months of iteration, **The Agency** is a collection of 51 meticulously crafted AI agent personalities. Each agent is:
+**The Flutter Agency** is a collection of 51 meticulously crafted Flutter-specialized AI agent personalities. Each agent is:
 
-- **🎯 Specialized**: Deep expertise in their domain (not generic prompt templates)
-- **🧠 Personality-Driven**: Unique voice, communication style, and approach
-- **📋 Deliverable-Focused**: Real code, processes, and measurable outcomes
-- **✅ Production-Ready**: Battle-tested workflows and success metrics
+- **🎯 Flutter-Specialized**: Deep expertise in Flutter/Dart, BLoC patterns, Mason bricks, and cross-platform development
+- **🧠 Personality-Driven**: Unique voice, communication style, and Flutter-focused approach
+- **📋 Deliverable-Focused**: Real Flutter/Dart code, BLoC patterns, Mason brick workflows, and measurable outcomes
+- **✅ Production-Ready**: Battle-tested Flutter development workflows and success metrics
 
-**Think of it as**: Assembling your dream team, except they're AI specialists who never sleep, never complain, and always deliver.
+**Think of it as**: Assembling your dream Flutter development team, except they're AI specialists who master BLoC, know every pub.dev package, and deliver production-ready Flutter apps.
 
 ---
 
@@ -49,17 +49,17 @@ Browse the agents below and copy/adapt the ones you need!
 
 ### 💻 Engineering Division (7 Agents)
 
-Building the future, one commit at a time.
+Building Flutter apps across all platforms, one widget at a time.
 
 | Agent | Specialty | When to Use |
 |-------|-----------|-------------|
-| 🎨 [Frontend Developer](engineering/engineering-frontend-developer.md) | React/Vue/Angular, UI implementation, performance | Modern web apps, pixel-perfect UIs, Core Web Vitals optimization |
-| 🏗️ [Backend Architect](engineering/engineering-backend-architect.md) | API design, database architecture, scalability | Server-side systems, microservices, cloud infrastructure |
-| 📱 [Mobile App Builder](engineering/engineering-mobile-app-builder.md) | iOS/Android, React Native, Flutter | Native and cross-platform mobile applications |
-| 🤖 [AI Engineer](engineering/engineering-ai-engineer.md) | ML models, deployment, AI integration | Machine learning features, data pipelines, AI-powered apps |
-| 🚀 [DevOps Automator](engineering/engineering-devops-automator.md) | CI/CD, infrastructure automation, cloud ops | Pipeline development, deployment automation, monitoring |
-| ⚡ [Rapid Prototyper](engineering/engineering-rapid-prototyper.md) | Fast POC development, MVPs | Quick proof-of-concepts, hackathon projects, fast iteration |
-| 💎 [Senior Developer](engineering/engineering-senior-developer.md) | Laravel/Livewire, advanced patterns | Complex implementations, architecture decisions |
+| 🎨 [Flutter UI Developer](engineering/engineering-frontend-developer.md) | Flutter widgets, BLoC state management, Material Design 3 | Cross-platform Flutter apps, pixel-perfect UIs, 60fps performance |
+| 🏗️ [Serverpod Backend Architect](engineering/engineering-backend-architect.md) | Serverpod protocols, PostgreSQL, real-time streaming | Type-safe Dart backends, Flutter-server integration, WebSocket streaming |
+| 📱 [Flutter App Builder](engineering/engineering-mobile-app-builder.md) | iOS/Android/Web/Desktop Flutter, platform channels | Cross-platform Flutter apps with platform-specific features |
+| 🤖 [Flutter AI Engineer](engineering/engineering-ai-engineer.md) | Firebase ML Kit, TensorFlow Lite, on-device AI | ML features in Flutter apps, image recognition, AI chatbots |
+| 🚀 [Flutter DevOps Engineer](engineering/engineering-devops-automator.md) | Flutter CI/CD, app store deployment, Codemagic | Automated Flutter builds, App Store/Play Store deployments |
+| ⚡ [Flutter Rapid Prototyper](engineering/engineering-rapid-prototyper.md) | Mason bricks, Firebase BaaS, rapid MVPs | Quick Flutter prototypes, 2-3 day MVPs, idea validation |
+| 💎 [Flutter Senior Developer](engineering/engineering-senior-developer.md) | Advanced widgets, custom animations, Shadcn Flutter | Premium Flutter implementations, complex animations, polished UX |
 
 ### 🎨 Design Division (6 Agents)
 
@@ -165,16 +165,16 @@ The unique specialists who don't fit in a box.
 
 ## 🎯 Real-World Use Cases
 
-### Scenario 1: Building a Startup MVP
+### Scenario 1: Building a Flutter Startup MVP
 
 **Your Team**:
-1. 🎨 **Frontend Developer** - Build the React app
-2. 🏗️ **Backend Architect** - Design the API and database
-3. 🚀 **Growth Hacker** - Plan user acquisition
-4. ⚡ **Rapid Prototyper** - Fast iteration cycles
-5. 🔍 **Reality Checker** - Ensure quality before launch
+1. ⚡ **Flutter Rapid Prototyper** - Initialize with `mason make flutter_init_no_backend`
+2. 🎨 **Flutter UI Developer** - Build screens with BLoC and Shadcn Flutter
+3. 🏗️ **Serverpod Backend Architect** - Set up type-safe Dart backend
+4. 🚀 **Flutter Growth Hacker** - Plan app store optimization and user acquisition
+5. 🔍 **Flutter Reality Checker** - Ensure quality with device testing before launch
 
-**Result**: Ship faster with specialized expertise at every stage.
+**Result**: Ship cross-platform Flutter MVP in days with Mason brick acceleration and production-ready architecture.
 
 ---
 
@@ -286,11 +286,12 @@ Each agent is designed with:
 
 ## 📊 Stats
 
-- 🎭 **51 Specialized Agents** across 9 divisions
-- 📝 **10,000+ lines** of personality, process, and code examples
-- ⏱️ **Months of iteration** from real-world usage
-- 🌟 **Battle-tested** in production environments
-- 💬 **50+ requests** in first 12 hours on Reddit
+- 🎭 **51 Flutter-Specialized Agents** across 9 divisions
+- 📝 **15,000+ lines** of Flutter/Dart code examples, BLoC patterns, and Mason brick workflows
+- ⏱️ **Transformed for Flutter excellence** with sealed class patterns and clean architecture
+- 🌟 **Production-ready** Flutter development patterns and best practices
+- 🧱 **Mason Brick Integration** across all engineering and PM agents for rapid development
+- 🎯 **Covers all platforms**: iOS, Android, Web, Desktop (Windows, macOS, Linux)
 
 ---
 
